@@ -1,0 +1,71 @@
+Keywords
+
+1.Begin
+2.End
+3.int
+4.alpha
+5.bool
+6.test
+7.exe
+8.or
+9.repeat
+10.times
+
+Description
+
+1.Program begins with this reserved keyword.
+2.Program ends with this reserved keyword.
+3.Data type used to define the integer variables.
+4.Data type used to define alphabets.
+5.Data type used to define Boolean variables that contains either 0 or 1.
+6.Checks the variable with a condition.
+7.Executes the following statement block if the condition check evaluates to true
+8.Executes the following statement block if the condition check evaluates to false
+9.Starts the loop/ iteration
+10.Defines how many times the iteration will occur.
+
+
+BNF Grammar of the Language
+
+Begin <sb> End
+<sb>  ::= <s>|<s><sb>
+<s> ::= <declare>|<test>|<assn>|<loop>
+<declare> ::= "int" <var>|"alpha" <var>|"bool" <var>
+<test>  ::= "test" (<cond>) "exe" <sb> ["or" <sb>]
+<cond>  ::= <var><logic><var>|<var>
+<assn>  ::= <declare>=<exp>|<var>=<exp>
+<loop>  ::= "repeat" <var> <var> "times"
+<logic> ::= |<||>||==||>=||<=||!=|
+<exp> ::= <exp>+<t>|<exp>-<t>|<t>
+<t> ::= <t>*<f>|<t>/<f>|<f>
+<f> ::= <c>
+<c> ::= <alpha>|<int>|<bool>
+<var> ::= <alpha><var>|<int><var>
+<int> ::= <int><dig>|<dig>
+<bool>  ::= |True||False|
+<alpha> ::= |a||b|...|z| |A||B|....|Z|
+<dig> ::= 0|1|2|3|4|5|6|7|8|9
+
+
+Non-Terminal symbols are enclosed in angular brackets(<>)
+Terminal symbols are quoted in double quotes.
+<declare> - declare the variable of particular data type.
+<test> - test the condition on any variable.
+<assn> - assign the variables with some values.
+<loop> - start a loop.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
